@@ -27,17 +27,33 @@
     <hr />
     <button onclick="remove_h1()">Remove H1</button>
     <button onclick="remove_h3()">Remove H3</button>
-    <button onclick="remove_h1()">Remove H5</button>
-    <button onclick="remove_h1()">Remove Red</button>
+    <button onclick="remove_h5()">Remove H5</button>
+    <button onclick="remove_red('red')">Remove Red</button>
     <button onclick="remove_div()">Remove DIVS</button>
     <script>
+      function remove_h1() {
+        var first_h1 = document.querySelector("h1");
+        first_h1.remove();
+      }
       function remove_h3() {
         var h3_items = document.querySelectorAll("h3");
         for (var i = 0; i < h3_items.length; i++) {
           h3_items[i].remove();
         }
       }
-
+      function remove_h5() {
+        var h5_items = document.querySelectorAll("h5");
+        for (var i = 0; i < h5_items.length; i++) {
+          h5_items[i].remove();
+        }
+      }
+      function remove_red(name) {
+        var childs = document.querySelectorAll("." + name);
+        // console.log(childs.length);
+        for (var i = 0; i < childs.length; i++) {
+          childs[i].remove();
+        }
+      }
       function remove_div() {
         var parent = document.getElementById("cont");
         var div_ch = parent.querySelectorAll("div");
