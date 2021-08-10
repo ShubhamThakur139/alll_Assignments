@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      body {
+        background-color: #eeeeee;
+        overflow: hidden;
+      }
+      #main {
+        width: 98%;
+        height: 600px;
+        margin: 1% auto;
+        border: 1px solid black;
+      }
+      #main > div {
+        width: 48%;
+        margin: 1%;
+        height: 96%;
+        float: left;
+        /* border: 1px solid black; */
+      }
+      #left > div:nth-child(1) {
+        width: 98%;
+        margin: 2% 1%;
+        height: 70%;
+        background-color: #08345b;
+        color: white;
+      }
+      #left > div:nth-child(1) > .img-box-l {
+        width: 100%;
+        height: 50%;
+      }
+      #left > div:nth-child(1) > .img-box-l > img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+      }
+      #left > div:nth-child(1) > .img-content-l {
+        padding: 1%;
+        height: 50%;
+        max-height: 50%;
+        /* overflow-y: scroll; */
+      }
+      #left > div:nth-child(1) > .img-content-l > p {
+        margin: 0;
+        font-size: 14px;
+        margin: 2px 0;
+        font-weight: 500;
+      }
+      #left > div:nth-child(1) > .img-content-l > p:last-child {
+        margin-top: 2%;
+        margin-left: 5px;
+        color: #bdbdbd;
+      }
+      #left > div:last-child {
+        width: 98%;
+        height: 23%;
+        margin: 2% 1%;
+        background-color: white;
+      }
+      /* #left > div:nth-child(2) {
+        float: left;
+      } */
+      #left > div:last-child > .img-box {
+        width: 30%;
+        height: 100%;
+        float: left;
+      }
+      #left > div:last-child > .img-box > img {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+      }
+      #left > div:last-child > .img-content {
+        float: left;
+        width: 68%;
+        height: 100%;
+        padding: 1%;
+        /* padding-left: 2%; */
+      }
+      #left > div:last-child > .img-content > h3 {
+        color: darkslateblue;
+        font-size: 16px;
+        margin: 0;
+      }
+      #left > div:last-child > .img-content > p {
+        color: darkslateblue;
+        padding-top: 1%;
+        font-size: 15px;
+        margin: 0;
+      }
+      #right > div {
+        width: 98%;
+        height: 22%;
+        margin: 2% 1%;
+        background-color: white;
+      }
+      #right > div > div {
+        float: left;
+      }
+      #right > div > .img-box {
+        width: 30%;
+        height: 100%;
+      }
+      #right > div > .img-box > img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+      }
+      #right > div > .img-content {
+        width: 68%;
+        height: 100%;
+        padding: 1%;
+        /* overflow: scroll; */
+      }
+      #right > div > .img-content > h3 {
+        color: darkslateblue;
+        font-size: 16px;
+        margin: 0;
+      }
+      #right > div > .img-content > p {
+        color: darkslateblue;
+        padding-top: 1%;
+        font-size: 15px;
+        margin: 0;
+      }
+      .c-both {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="left">
+        <div>
+          <div class="img-box-l">
+            <img
+              src="https://c.ndtvimg.com/2021-08/n6tdfckg_india-mens-hockey-team-olympic-celebration-630_240x180_05_August_21.jpg?output-quality=60&output-format=webp&downsize=530:*"
+              alt=""
+            />
+          </div>
+          <div class="img-content-l">
+            <h3>
+              Tokyo Games: Indian Men's Hockey Team Beats Germany To Win Bronze,
+              Ends 41-Year Wait For Olympic Medal
+            </h3>
+            <p>KALLOL BHATTACHERJEE</p>
+            <p>SUHASINI HAIDAR</p>
+            <p>
+              Simranjeet Singh scored a brace while Hardik Singh, Harmanpreet
+              Singh and Rupinder Pal Singh also got their names on the
+              scoresheet for India.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="img-box">
+            <img
+              src="https://c.ndtvimg.com/2021-08/0vko7af_rohit-rahul_625x300_05_August_21.jpg?im=FitAndFill,algorithm=dnn,width=240,height=180"
+              alt=""
+            />
+          </div>
+          <div class="img-content">
+            <h3>NATIONAL</h3>
+            <p>
+              IND vs ENG, 1st Test, Day 2 Live Cricket Score: KL Rahul, Rohit
+              Sharma Look To Capitalise On Good Start
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div>
+          <div class="img-box">
+            <img
+              src="https://c.ndtvimg.com/2021-03/q245duvg_elon-musk-reuters_120x90_25_March_21.jpg"
+              alt=""
+            />
+          </div>
+          <div class="img-content">
+            <h3>NATIONAL</h3>
+            <p>
+              Elon Musk Confirms Walter Isaacson Is Writing His Second Biography
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="img-box">
+            <img
+              src="https://c.ndtvimg.com/2021-08/ge7oteno_kabuli-mutton-pulao_625x300_05_August_21.jpg?im=FeatureCrop,algorithm=dnn,width=345,height=250"
+              alt=""
+            />
+          </div>
+          <div class="img-content">
+            <h3>NATIONAL</h3>
+            <p>
+              Kabuli Mutton Pulao: Move Over Mutton Biryani, This Simple Mutton
+              Pulao Is Here To Win Hearts
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="img-box">
+            <img
+              src="https://c.ndtvimg.com/2021-08/rmj0cfm_lauren-tiller-twitter_120x90_05_August_21.jpg"
+              alt=""
+            />
+          </div>
+          <div class="img-content">
+            <h3>NATIONAL</h3>
+            <p>
+              Watch: France Volleyball Coach Dives Full-Length To Keep Ball In
+              Play During Tokyo Olympics Match
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="img-box">
+            <img
+              src="https://c.ndtvimg.com/2021-08/bramkc7k_simple-one-electric-scooter_120x90_05_August_21.jpg"
+              alt=""
+            />
+          </div>
+          <div class="img-content">
+            <h3>NATIONAL</h3>
+            <p>
+              Simple One Electric Scooter Pre-Orders To Begin From August 15
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="c-both"></div>
+    </div>
+  </body>
+</html>

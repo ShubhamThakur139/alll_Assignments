@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js DOM</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="myInput" />
+    </div>
+    <br />
+    <p id="demo" style="visibility: hidden">Shubham</p>
+    <button onclick="showInput()">Alert Input</button>
+    <script>
+      function showInput() {
+        alert(document.getElementById("myInput").value);
+        document.getElementById("demo").style.visibility = "visible";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <p id="demo">Shubham</p>
+    <button onclick="alertme()">Alert Button</button>
+    <script>
+      function alertme() {
+        document.getElementById("demo").innerHTML = "Shubham Thakur";
+        // alert("Why you called me I was sleeping you dumbo");
+      }
+    </script> -->
+
+<!-- <h1 id="demo">JavaScript</h1>
+    <button onclick="changeMasai()">change to Masai</button>
+    <button onclick="changeJS()">change to JavaScript</button>
+
+    <script>
+      function changeMasai() {
+        document.getElementById("demo").textContent =
+          "<ul><li>A</li><li>B</li><li>C</li></ul>";
+      }
+      function changeJS() {
+        document.getElementById("demo").innerHTML =
+          "<ul><li>A</li><li>B</li><li>C</li></ul>";
+      }
+    </script> -->
+
+<!-- <div>
+        <input type="text" id="myInput" />
+      </div>
+      <br />
+      <button onclick="showInput()">Alert Input</button>
+      <script>
+        function showInput() {
+          alert(document.getElementById("myInput").value);
+        }
+      </script> -->

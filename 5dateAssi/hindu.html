@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hindu Article Responsive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      body {
+        background-color: #eeeeee;
+      }
+      #main {
+        display: grid;
+        gap: 10px;
+      }
+      .big {
+        background-color: #08345b;
+        color: white;
+      }
+      .big .img-box-l {
+        height: 50%;
+      }
+      .big .img-box-l img {
+        height: 100%;
+        width: 100%;
+      }
+      .big .img-content-l {
+        padding: 1%;
+        height: 50%;
+        max-height: 50%;
+      }
+      .cont {
+        display: flex;
+        background-color: white;
+      }
+      .cont .img-box {
+        /* max-width: 30%; */
+        height: 100%;
+      }
+      .cont .img-box img {
+        /* width: 100%; */
+        height: 100%;
+      }
+      .cont .img-content {
+        padding: 2px 5px;
+      }
+      #one {
+        height: 480px;
+        grid-area: tbox;
+      }
+      #two {
+        height: 150px;
+        grid-area: box1;
+      }
+      #three {
+        height: 150px;
+        grid-area: box2;
+      }
+      #four {
+        height: 150px;
+        grid-area: box3;
+      }
+      #five {
+        height: 150px;
+        grid-area: box4;
+      }
+      #six {
+        height: 150px;
+        grid-area: box5;
+      }
+      @media screen and (max-width: 600px) {
+        #main {
+          grid-template:
+            "tbox"
+            "box1"
+            "box2"
+            "box3"
+            "box4"
+            "box5";
+        }
+      }
+      @media screen and (min-width: 600px) {
+        #main {
+          grid-template:
+            "tbox tbox"
+            "box1 box2"
+            "box3 box4"
+            "box5 box5";
+        }
+      }
+      @media screen and (min-width: 992px) {
+        #main {
+          grid-template:
+            "tbox box2"
+            "tbox box3"
+            "tbox box4"
+            "box1 box5";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="one" class="big">
+        <div class="img-box-l">
+          <img
+            src="https://c.ndtvimg.com/2021-08/n6tdfckg_india-mens-hockey-team-olympic-celebration-630_240x180_05_August_21.jpg?output-quality=60&output-format=webp&downsize=530:*"
+            alt=""
+          />
+        </div>
+        <div class="img-content-l">
+          <h3>
+            Tokyo Games: Indian Men's Hockey Team Beats Germany To Win Bronze,
+            Ends 41-Year Wait For Olympic Medal
+          </h3>
+          <p>KALLOL BHATTACHERJEE</p>
+          <p>SUHASINI HAIDAR</p>
+          <p>
+            Simranjeet Singh scored a brace while Hardik Singh, Harmanpreet
+            Singh and Rupinder Pal Singh also got their names on the scoresheet
+            for India.
+          </p>
+        </div>
+      </div>
+      <div id="two" class="cont">
+        <div class="img-box">
+          <img
+            src="https://c.ndtvimg.com/2021-03/q245duvg_elon-musk-reuters_120x90_25_March_21.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-content">
+          <h3>NATIONAL</h3>
+          <p>
+            IND vs ENG, 1st Test, Day 2 Live Cricket Score: KL Rahul, Rohit
+            Sharma Look To Capitalise On Good Start
+          </p>
+        </div>
+      </div>
+      <div id="three" class="cont">
+        <div class="img-box">
+          <img
+            src="https://c.ndtvimg.com/2021-03/q245duvg_elon-musk-reuters_120x90_25_March_21.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-content">
+          <h3>NATIONAL</h3>
+          <p>
+            Elon Musk Confirms Walter Isaacson Is Writing His Second Biography
+          </p>
+        </div>
+      </div>
+      <div id="four" class="cont">
+        <div class="img-box">
+          <img
+            src="https://c.ndtvimg.com/2021-08/rmj0cfm_lauren-tiller-twitter_120x90_05_August_21.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-content">
+          <h3>NATIONAL</h3>
+          <p>
+            Kabuli Mutton Pulao: Move Over Mutton Biryani, This Simple Mutton
+            Pulao Is Here To Win Hearts
+          </p>
+        </div>
+      </div>
+      <div id="five" class="cont">
+        <div class="img-box">
+          <img
+            src="https://c.ndtvimg.com/2021-08/rmj0cfm_lauren-tiller-twitter_120x90_05_August_21.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-content">
+          <h3>NATIONAL</h3>
+          <p>
+            Watch: France Volleyball Coach Dives Full-Length To Keep Ball In
+            Play During Tokyo Olympics Match
+          </p>
+        </div>
+      </div>
+      <div id="six" class="cont">
+        <div class="img-box">
+          <img
+            src="https://c.ndtvimg.com/2021-08/bramkc7k_simple-one-electric-scooter_120x90_05_August_21.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-content">
+          <h3>NATIONAL</h3>
+          <p>Simple One Electric Scooter Pre-Orders To Begin From August 15</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

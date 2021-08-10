@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Part Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+      h1 {
+        text-align: center;
+        font-weight: 600;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+      }
+      #bar-cont {
+        width: 60%;
+        height: 600px;
+        margin: auto;
+        min-width: 600px;
+        margin-top: 4%;
+      }
+      #bar-cont > div {
+        width: 23%;
+        margin: 1%;
+        height: 90%;
+        background-color: teal;
+        float: left;
+        border-radius: 6px;
+      }
+      .c-both {
+        clear: both;
+      }
+      .row {
+        max-width: 1000px;
+        margin: auto;
+        min-width: 600px;
+        clear: both;
+      }
+      .row > div {
+        height: 150px;
+        background-color: teal;
+        border-radius: 6px;
+        margin: 1%;
+        float: left;
+      }
+      .p-1-5 {
+        width: 18%;
+      }
+      .p-3-5 {
+        width: 54%;
+      }
+      #campus-cont {
+        max-width: 1000px;
+        margin: auto;
+      }
+      .campus-box > div {
+        width: 31%;
+        margin: 1%;
+        float: left;
+      }
+      .img-box {
+        border: 1px solid #757575;
+        background-color: #eeeeee;
+        padding: 4px;
+      }
+      .img-box > img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1st layout  -->
+    <div id="bar-cont">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="c-both"></div>
+    <!-- 2nd layout  -->
+    <div class="row">
+      <div class="p-1-5"></div>
+      <div class="p-3-5"></div>
+      <div class="p-1-5"></div>
+    </div>
+    <div class="row">
+      <div class="p-3-5"></div>
+      <div class="p-1-5"></div>
+      <div class="p-1-5"></div>
+    </div>
+    <div class="row">
+      <div class="p-1-5"></div>
+      <div class="p-1-5"></div>
+      <div class="p-3-5"></div>
+    </div>
+    <div id="campus-cont" class="c-both">
+      <h1>Masai School Campus</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias
+        ad id reiciendis expedita asperiores odio rem animi velit quaerat
+        eligendi ab consequatur quas, repellat dignissimos. Facere explicabo,
+        fugit consectetur labore perferendis magni saepe voluptate reprehenderit
+        rerum ipsa. Mollitia, excepturi!
+      </p>
+      <div class="campus-box">
+        <div>
+          <div class="img-box">
+            <img
+              src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+              alt=""
+            />
+          </div>
+          <p>91 SpringBoard, Koranangala</p>
+        </div>
+        <div>
+          <div class="img-box">
+            <img
+              src="https://www.masaischool.com/static/campus/location_2/bhive_min_2.jpg"
+              alt=""
+            />
+          </div>
+          <p>BHIVE, Bangalore</p>
+        </div>
+        <div>
+          <div class="img-box">
+            <img
+              src="https://www.masaischool.com/static/campus/location_3/workstudio_min_2.jpg"
+              alt=""
+            />
+          </div>
+          <p>Work Studio, Patna</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

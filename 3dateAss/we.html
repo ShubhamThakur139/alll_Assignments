@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>We Part Assignment</title>
+    <style>
+      #register > div {
+        width: 500px;
+        float: left;
+        margin: 50px;
+      }
+      #register {
+        width: 1260px;
+        margin: auto;
+      }
+      label,
+      input {
+        display: block;
+      }
+      #reg-form input {
+        border: 1px solid black;
+        width: 300px;
+        font-size: 25px;
+      }
+      #reg-form label {
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
+      #reg-form input + label {
+        margin-top: 20px;
+      }
+      #reg-form input + p {
+        margin-top: 0;
+        color: red;
+      }
+      input[type="submit"] {
+        background-color: black;
+        color: white;
+        margin-top: 10px;
+      }
+      #reg-info {
+        background-color: black;
+        color: white;
+        padding: 60px 30px;
+      }
+      #reg-info > p:nth-child(odd) {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      #reg-info > p:nth-child(even) {
+        font-size: 25px;
+        margin-top: 2px;
+        margin-bottom: 14px;
+      }
+      #reg-info > p:nth-child(2) {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1st layout  -->
+    <div id="register">
+      <div id="reg-form">
+        <form>
+          <label>NAME</label>
+          <input type="text" />
+          <label>EMAIL</label>
+          <input type="text" />
+          <label>MOBILE</label>
+          <input type="text" />
+          <p>Enter a valid mobile number</p>
+          <input type="submit" value="REGISTER" />
+        </form>
+      </div>
+      <div id="reg-info">
+        <p>NAME</p>
+        <p>MASAI</p>
+        <p>EMAIL</p>
+        <p>email@masaischool.com</p>
+        <p>MOBILE</p>
+        <p>9876541230</p>
+      </div>
+    </div>
+  </body>
+</html>

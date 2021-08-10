@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Template Assignment</title>
+    <style>
+      #template {
+        display: grid;
+        gap: 20px;
+        width: 900px;
+        margin: auto;
+      }
+      #top {
+        background-color: red;
+        height: 100px;
+        grid-area: tbox;
+      }
+      #left {
+        background-color: green;
+        height: 500px;
+        grid-area: lbox;
+      }
+      #right {
+        background-color: darkolivegreen;
+        height: 500px;
+        grid-area: rbox;
+      }
+      @media screen and (min-width: 992px) {
+        #template {
+          grid-template:
+            "tbox tbox tbox"
+            "lbox rbox rbox";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="template">
+      <div id="top"></div>
+      <div id="left"></div>
+      <div id="right"></div>
+    </div>
+  </body>
+</html>

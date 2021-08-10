@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>responsive Assignment</title>
+    <style>
+      #main {
+        display: grid;
+        gap: 10px;
+      }
+      #nav {
+        background-color: yellow;
+        height: 50px;
+        grid-area: top;
+        padding: 5px;
+        font-size: 30px;
+        font-weight: 700;
+      }
+      #one {
+        background-color: red;
+        height: 150px;
+        grid-area: box1;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      #two {
+        background-color: #00ff2a;
+        height: 150px;
+        grid-area: box2;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      #three {
+        background-color: #5763ee;
+        height: 150px;
+        grid-area: box3;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      #four {
+        background-color: grey;
+        height: 150px;
+        grid-area: box4;
+        padding: 5px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      @media screen and (max-width: 600px) {
+        #main {
+          grid-template:
+            "top"
+            "box1"
+            "box2"
+            "box3"
+            "box4";
+        }
+        #nav,
+        #one,
+        #two,
+        #three,
+        #four {
+          height: 100px;
+        }
+      }
+      @media screen and (min-width: 600px) {
+        #main {
+          grid-template:
+            "top top"
+            "box1 box3"
+            "box2 box4";
+        }
+      }
+      @media screen and (min-width: 992px) {
+        #main {
+          grid-template:
+            "top top top top"
+            "box1 box2 box3 box4";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="nav">Navigation</div>
+      <div id="one">Box 1</div>
+      <div id="two">Box 2</div>
+      <div id="three">Box 3</div>
+      <div id="four">Box 4</div>
+    </div>
+  </body>
+</html>
