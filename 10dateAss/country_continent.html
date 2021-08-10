@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I part Assignment(Country Continent)</title>
+    <style>
+      #main {
+        width: 80%;
+        margin: auto;
+        margin-top: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <label for="">Choose Country: </label>
+      <select name="" id="country">
+        <option value="India">India</option>
+        <option value="usa">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="south_africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+      </select>
+      <br />
+      <br />
+      <button onclick="find_continent()">Find Continent</button>
+    </div>
+    <script>
+      function find_continent() {
+        var country = document.getElementById("country").value;
+        console.log(country);
+        switch (country) {
+          case "India":
+          case "Nepal":
+          case "China":
+          case "Singapore":
+            alert(`The Continent is Asia`);
+            break;
+          case "Nigeria":
+          case "south_africa":
+            alert(`The Continent is Africa`);
+            break;
+          case "Sweden":
+          case "Germany":
+          case "France":
+            alert(`The Continent is Europe`);
+            break;
+          case "usa":
+          case "Canada":
+          case "Mexico":
+            alert(`The Continent is North America`);
+            break;
+          case "Brazil":
+          case "Argentina":
+            alert(`The Continent is South America`);
+            break;
+          case "Australia":
+            alert(`The Continent is Oceania`);
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
