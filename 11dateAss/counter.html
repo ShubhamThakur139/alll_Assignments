@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #5d4037;
+      }
+      button {
+        border: none;
+        padding: 10px;
+        margin: 20px;
+        color: white;
+        font-size: 30px;
+      }
+      .green-bg {
+        color: white;
+        background-color: #388e3c;
+      }
+      .red-bg {
+        color: white;
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="disp">0</h1>
+    <div>
+      <button id="add">+</button>
+      <button id="sub">-</button>
+    </div>
+    <script>
+      let counter = 0;
+      const addBtn = document.getElementById("add");
+      const subBtn = document.getElementById("sub");
+
+      addBtn.addEventListener("click", () => {
+        counter++;
+        let display = document.getElementById("disp");
+        display.textContent = counter;
+        display.setAttribute("class", "green-bg");
+        // if (counter == 10) {
+        //     addBtn.removeEventListener('click',inc)
+        // }
+      });
+
+      subBtn.addEventListener("click", () => {
+        counter = counter - 2;
+        let display = document.getElementById("disp");
+        display.textContent = counter;
+        display.setAttribute("class", "red-bg");
+      });
+
+      addBtn.setAttribute("class", "green-bg");
+      subBtn.setAttribute("class", "red-bg");
+    </script>
+  </body>
+</html>

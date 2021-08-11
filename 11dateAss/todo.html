@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="">Name</label>
+      <input type="text" name="" id="name" />
+      <label for="">Quantity</label>
+      <input type="number" name="" id="quantity" />
+      <label for="">Priority</label>
+      <select name="" id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <br />
+      <input type="submit" value="submit" />
+      <br />
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Quantity</td>
+          <td>Priority</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      var form = document.querySelector("form");
+      var addData = function (event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var quantity = document.getElementById("quantity").value;
+        var priority = document.getElementById("priority").value;
+        // console.log(`Form submitted`);
+        createItem(name, quantity, priority);
+      };
+
+      var complete = function (event) {
+        var parent = event.target.parentNode;
+        parent.style.backgroundColor = "green";
+      };
+      var deleted = function (even) {
+        var parent = event.target.parentNode;
+        parent.remove();
+      };
+
+      function createItem(name, quantity, priority) {
+        var parent = document.querySelector("table");
+        var row = document.createElement("tr");
+        var c1 = document.createElement("td");
+        c1.textContent = name;
+        var c2 = document.createElement("td");
+        c2.textContent = quantity;
+        var c3 = document.createElement("td");
+        c3.textContent = priority;
+        var c4 = document.createElement("td");
+        c4.textContent = "Mark Complete";
+        c4.addEventListener("click", complete);
+        var c5 = document.createElement("td");
+        c5.textContent = "Delete";
+        c5.addEventListener("click", deleted);
+        row.appendChild(c1);
+        row.appendChild(c2);
+        row.appendChild(c3);
+        row.appendChild(c4);
+        row.appendChild(c5);
+        parent.appendChild(row);
+      }
+
+      form.addEventListener("submit", addData);
+    </script>
+  </body>
+</html>
