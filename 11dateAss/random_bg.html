@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Background on Resizing window</title>
+  </head>
+  <body>
+    <h1>Do Resize Screen to see Different background colors and Enjoy</h1>
+    <h2>It seems you are in disco</h2>
+    <script>
+      window.addEventListener("resize", () => {
+        const body = document.body;
+        const colors = [
+          "red",
+          "green",
+          "yellow",
+          "blue",
+          "pink",
+          "orange",
+          "purple",
+          "chartreuse",
+          "orangered",
+          "teal",
+        ];
+        let ran = Math.floor(Math.random() * 10 + 1);
+        console.log(colors[ran]);
+        body.style.background = colors[ran];
+      });
+    </script>
+  </body>
+</html>
