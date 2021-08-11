@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Part Assignment(LeaderBoard)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main {
+        width: 80%;
+        height: 800px;
+        margin: auto;
+      }
+      #main > div:first-child {
+        margin-top: 16px !important;
+        width: 40%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      #main > div:first-child > div {
+        width: 25%;
+        height: 60px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 700;
+        background-color: red;
+        border: 1px solid black;
+      }
+      #main > div:first-child > div h4 {
+        margin-top: 10px;
+      }
+      #main > div:last-child {
+        margin-top: 20px;
+        text-align: center;
+      }
+      #calc {
+        width: 25%;
+        height: 600px;
+        margin: auto;
+        margin-top: 10px;
+        display: grid;
+        gap: 4%;
+        grid-template-columns: repeat(3, 34%);
+        grid-template-rows: repeat(7, 8%);
+      }
+      button {
+        width: 100%;
+        height: 100%;
+      }
+      #calc > div {
+        border: 1px solid black;
+      }
+      #calc > div > button {
+        border: none;
+        font-size: 28px;
+      }
+      #calc > div:nth-child(1) {
+        padding-top: 20%;
+        background-color: gray;
+        grid-area: 1/ 1/ 3/ 4;
+      }
+
+      #calc > div:nth-child(even) button {
+        background-color: #668100;
+      }
+      #calc > div:nth-of-type(odd) button,
+      #calc > div:nth-child(6) button {
+        background-color: #ff6600;
+      }
+      #calc > div:nth-child(11) {
+        grid-area: 6/ 2/ 7/ 3;
+      }
+      #calc > div:nth-child(11) button {
+        background-color: #810065;
+      }
+      #calc > div:last-child {
+        grid-area: 7/ 1/ 8/ 4;
+      }
+      #calc > div:last-child button {
+        background-color: #000000;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div>
+        <div>
+          <div id="min">43</div>
+          <br />
+          <h4>Min</h4>
+        </div>
+        <div>
+          <div id="max">2019</div>
+          <br />
+          <h4>Max</h4>
+        </div>
+      </div>
+      <div>
+        <h1>SCORE</h1>
+        <div id="calc">
+          <div><h1 id="total_no"></h1></div>
+          <div>
+            <button onclick="getValue(1)" value="1" id="index_1">1</button>
+          </div>
+          <div>
+            <button onclick="getValue(2)" value="2" id="index_2">2</button>
+          </div>
+          <div>
+            <button onclick="getValue(3)" value="3" id="index_3">3</button>
+          </div>
+          <div>
+            <button onclick="getValue(4)" value="4" id="index_4">4</button>
+          </div>
+          <div>
+            <button onclick="getValue(5)" value="5" id="index_5">5</button>
+          </div>
+          <div>
+            <button onclick="getValue(6)" value="6" id="index_6">6</button>
+          </div>
+          <div>
+            <button onclick="getValue(7)" value="7" id="index_7">7</button>
+          </div>
+          <div>
+            <button onclick="getValue(8)" value="8" id="index_8">8</button>
+          </div>
+          <div>
+            <button onclick="getValue(9)" value="9" id="index_9">9</button>
+          </div>
+          <div>
+            <button onclick="getValue(0)" value="0" id="index_0">0</button>
+          </div>
+          <div>
+            <button onclick="calculate()">ENTER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function getValue(num) {
+        var display = document.getElementById("total_no");
+        display.textContent += num;
+        // console.log(num);
+      }
+      function calculate() {
+        var val = document.getElementById("total_no");
+        var min = document.getElementById("min");
+        var max = document.getElementById("max");
+        if (parseInt(val.innerText) < parseInt(min.innerText)) {
+          min.textContent = val.innerText;
+        } else if (parseInt(val.innerText) > parseInt(max.innerText)) {
+          max.innerText = val.innerText;
+        }
+        val.textContent = "";
+      }
+    </script>
+  </body>
+</html>
