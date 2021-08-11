@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <h1 id="heading">My color should change when I double click the button!</h1>
+    <button id="changeColor">Click here to change my color</button>
+    <script>
+      const changeColor = document.getElementById("changeColor");
+      changeColor.addEventListener("dblclick", () => {
+        const colors = [
+          "red",
+          "green",
+          "yellow",
+          "blue",
+          "pink",
+          "orange",
+          "purple",
+          "chartreuse",
+          "orangered",
+          "teal",
+        ];
+        const heading = document.getElementById("heading");
+        let ran = Math.floor(Math.random() * 10 + 1);
+        heading.style.color = colors[ran];
+      });
+    </script>
+  </body>
+</html>
