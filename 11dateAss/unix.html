@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unix Assignment</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      button {
+        margin: 25px;
+        margin-bottom: 0;
+      }
+      .main {
+        width: 98%;
+        height: 800px;
+        margin: auto;
+      }
+      .first {
+        width: 40%;
+        margin: auto;
+        height: 40%;
+        background-color: #e3dadb;
+        text-align: center;
+      }
+      .name {
+        margin: 5px;
+        text-align: center;
+        color: darkblue;
+      }
+      .creator {
+        text-align: center;
+      }
+      .img-box {
+        object-fit: fill;
+        margin: 5px;
+        margin-top: 10px;
+        height: 60%;
+        width: 40%;
+      }
+      .second {
+        width: 70%;
+        height: 25%;
+        margin: auto;
+        padding: 2%;
+        margin-top: 1%;
+        /* border: 1px solid black; */
+        display: flex;
+      }
+      .sec_1 {
+        width: 28%;
+        height: 98%;
+        /* border: 1px solid black; */
+      }
+      .sec1_img {
+        width: 66%;
+        height: 96%;
+        object-fit: fill;
+      }
+      .sec_2 {
+        width: 69%;
+        height: 98%;
+        /* border: 1px solid black; */
+      }
+      .sec2_h1 {
+        color: orangered;
+        margin-bottom: 3%;
+      }
+      .third {
+        width: 80%;
+        height: 20%;
+        margin: auto;
+        background-color: #d35500;
+        display: flex;
+        padding: 2%;
+      }
+      .third_1 {
+        width: 48%;
+        height: 98%;
+        color: white;
+      }
+      .third_2 {
+        width: 1%;
+        height: 98%;
+        background-color: black;
+      }
+      .third_3 {
+        width: 48%;
+        height: 98%;
+        color: white;
+        /* float: right; */
+        text-align: right;
+      }
+      .third1_h3 {
+        margin-top: 4%;
+        color: black;
+      }
+      .third3_h3 {
+        margin-top: 7%;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Create Page</button>
+    <script>
+      const createPage = document.querySelector("button");
+      createPage.addEventListener("click", () => {
+        let body = document.body;
+        let child = document.createElement("div");
+        child.setAttribute("class", "main");
+        body.appendChild(child);
+        let box = document.createElement("div");
+        box.setAttribute("class", "first");
+        child.appendChild(box);
+        let img = document.createElement("img");
+        img.src =
+          "https://raw.githubusercontent.com/masai-school/full-stack-dev-1908/master/course/week_01/day_3/resources/images/linus.jpg";
+        img.setAttribute("class", "img-box");
+        box.appendChild(img);
+        let name = document.createElement("h1");
+        name.innerText = "Linus Torvalds";
+        name.setAttribute("class", "name");
+        box.appendChild(name);
+        let creator = document.createElement("h1");
+        creator.innerText = "The creator of Linux & Git";
+        creator.setAttribute("class", "creator");
+        box.appendChild(creator);
+        //2nd box
+        let second = document.createElement("div");
+        second.setAttribute("class", "second");
+        child.appendChild(second);
+        let sec_1 = document.createElement("div");
+        sec_1.setAttribute("class", "sec_1");
+        second.appendChild(sec_1);
+        let sec1_img = document.createElement("img");
+        sec1_img.src =
+          "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg";
+        sec1_img.setAttribute("class", "sec1_img");
+        sec_1.appendChild(sec1_img);
+        let sec_2 = document.createElement("div");
+        sec_2.setAttribute("class", "sec_2");
+        second.appendChild(sec_2);
+        let sec2_h1 = document.createElement("h1");
+        sec2_h1.innerText = "Sal Khan";
+        sec2_h1.setAttribute("class", "sec2_h1");
+        sec_2.appendChild(sec2_h1);
+        let sec2_h3 = document.createElement("h3");
+        sec2_h3.innerText =
+          "Salman Khan is the founder of Khan Academy which has a mission of providing a free world class education for anyone, anywhere.";
+        sec_2.appendChild(sec2_h3);
+        //3rd box
+        let third = document.createElement("div");
+        third.setAttribute("class", "third");
+        child.appendChild(third);
+
+        let third_1 = document.createElement("div");
+        third_1.setAttribute("class", "third_1");
+        third.appendChild(third_1);
+
+        let third1_h1 = document.createElement("h1");
+        third1_h1.innerText = "Ken Thompson";
+        third_1.appendChild(third1_h1);
+
+        let third1_h3 = document.createElement("h3");
+        third1_h3.innerText =
+          "Designed and Implemented the original unix operating system";
+        third1_h3.setAttribute("class", "third1_h3");
+        third_1.appendChild(third1_h3);
+        let third_2 = document.createElement("div");
+        third_2.setAttribute("class", "third_2");
+        third.appendChild(third_2);
+        let third_3 = document.createElement("div");
+        third_3.setAttribute("class", "third_3");
+        third.appendChild(third_3);
+        let third3_h1 = document.createElement("h1");
+        third3_h1.innerText = "Dennis Ritchie";
+        third_3.appendChild(third3_h1);
+        let third3_h3 = document.createElement("h3");
+        third3_h3.innerText = "The Creator of C programming Language";
+        third3_h3.setAttribute("class", "third3_h3");
+        third_3.appendChild(third3_h3);
+      });
+    </script>
+  </body>
+</html>
