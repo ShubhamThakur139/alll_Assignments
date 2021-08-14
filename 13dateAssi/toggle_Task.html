@@ -60,43 +60,102 @@
         <h2>Total Tasks</h2>
         <table>
           <tr>
+            <th>id</th>
             <th>Name</th>
             <th>Date</th>
             <th>Status</th>
+            <th>Toggle Task</th>
           </tr>
         </table>
       </div>
     </div>
 
     <script>
+      //creating array
       let arr = [];
-
+      let count = 1;
       //create constructor function for creating dynamically objects having propertes name , current Date and status
-      function task_func(n) {
+      function task_func(id, n) {
+        this.id = id;
         this.name = n;
         this.date = new Date().toDateString();
         this.status = false;
+      }
+      function removeAll() {
+        var rows = document.querySelectorAll("tr");
+        for (var i = 1; i < rows.length; i++) {
+          rows[i].remove();
+        }
+      }
+
+      function displayValue() {
+        removeAll();
+        for (var i = 0; i < arr.length; i++) {
+          let tr = document.createElement("tr");
+          let td0 = document.createElement("td");
+          td0.setAttribute("id", "id1");
+          td0.textContent = arr[i].id;
+          let td1 = document.createElement("td");
+          td1.textContent = arr[i].name;
+          let td2 = document.createElement("td");
+          td2.textContent = arr[i].date;
+          let td3 = document.createElement("td");
+          td3.textContent = arr[i].status;
+          let td4 = document.createElement("td");
+          td4.textContent = "Change Status";
+          td4.addEventListener("click", toggle_status);
+          //appending child into browser dynamically
+          tr.appendChild(td0);
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          // appending tr into into table
+          document.querySelector("table").appendChild(tr);
+        }
+      }
+
+      function toggle_status(event) {
+        var row = event.target.parentNode;
+        var id = row.querySelectorAll("td")[0];
+        var status = arr[id.innerText - 1].status;
+        if (!status) {
+          arr[id.innerText - 1].status = true;
+          displayValue();
+        } else {
+          arr[id.innerText - 1].status = false;
+          displayValue();
+        }
       }
 
       let submit_task = document.getElementById("submit_task");
       submit_task.addEventListener("click", () => {
         let task_name = document.getElementById("task_name");
         //creating dynamically object using constructor function
-        var tasks = new task_func(task_name.value);
-        //adding objects into the array
+        var tasks = new task_func(count, task_name.value);
+        // adding objects into array
         arr.push(tasks);
+        console.log(arr);
         //creating row with their data
         let tr = document.createElement("tr");
+        let td0 = document.createElement("td");
+        td0.setAttribute("id", "id1");
+        td0.textContent = count++;
         let td1 = document.createElement("td");
         td1.textContent = tasks.name;
         let td2 = document.createElement("td");
         td2.textContent = tasks.date;
         let td3 = document.createElement("td");
         td3.textContent = tasks.status;
+        let td4 = document.createElement("td");
+        td4.textContent = "Change Status";
+        td4.addEventListener("click", toggle_status);
         //appending child into browser dynamically
+        tr.appendChild(td0);
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
+        tr.appendChild(td4);
         // appending tr into into table
         document.querySelector("table").appendChild(tr);
         task_name.value = "";
