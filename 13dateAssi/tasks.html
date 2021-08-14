@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks Assignment</title>
+    <style>
+      #main {
+        width: 90%;
+        margin: auto;
+        height: 800px;
+      }
+      #main div:first-child {
+        width: 50%;
+        margin: auto;
+        height: 2%;
+        text-align: center;
+        padding: 3%;
+        /* border: 1px solid black; */
+      }
+      input {
+        width: 60%;
+        padding: 1%;
+        outline: none;
+        font-size: 90%;
+      }
+      button {
+        padding: 1%;
+        width: 15%;
+      }
+      #main div:last-child {
+        width: 50%;
+        margin: auto;
+      }
+      table {
+        border: 1px solid black;
+        text-align: center;
+      }
+      table > tr {
+        border: 1px solid black;
+      }
+      table th {
+        width: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div>
+        <input
+          type="text"
+          name=""
+          id="task_name"
+          placeholder="Enter task name"
+        />
+        <button type="submit" id="submit_task">SUBMIT</button>
+      </div>
+      <div>
+        <h2>Total Tasks</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      //create constructor function for creating dynamically objects having propertes name , current Date and status
+      function task_func(n) {
+        this.name = n;
+        this.date = new Date().toDateString();
+        this.status = false;
+      }
+
+      let submit_task = document.getElementById("submit_task");
+      submit_task.addEventListener("click", () => {
+        let task_name = document.getElementById("task_name");
+        //creating dynamically object using constructor function
+        var tasks = new task_func(task_name.value);
+        //creating row with their data
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.textContent = tasks.name;
+        let td2 = document.createElement("td");
+        td2.textContent = tasks.date;
+        let td3 = document.createElement("td");
+        td3.textContent = tasks.status;
+        //appending child into browser dynamically
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        // appending tr into into table
+        document.querySelector("table").appendChild(tr);
+        task_name.value = "";
+      });
+    </script>
+  </body>
+</html>
