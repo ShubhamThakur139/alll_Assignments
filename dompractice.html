@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 90%;
+        height: 800px;
+        margin: auto;
+        border: 1px solid black;
+      }
+      .first {
+        width: 98%;
+        height: 30%;
+        margin: auto;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Create Unix</button>
+    <script>
+      function createLayout() {
+        var main = document.createElement("div");
+        main.setAttribute("class", "main");
+        var body = document.body;
+        body.appendChild(main);
+        var first = document.createElement("div");
+        first.setAttribute("class", "first");
+        main.appendChild(first);
+      }
+
+      var create = document.querySelector("button");
+      create.addEventListener("click", createLayout);
+    </script>
+  </body>
+</html>

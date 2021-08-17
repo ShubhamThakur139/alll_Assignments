@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Array 3 Assignment</title>
+  </head>
+  <body>
+    <h1>Prototype & Inheritance</h1>
+    <script>
+      function MyArray(x) {
+        Object.defineProperty(this, "length", {
+          value: 0,
+          writable: true,
+          enumerable: false,
+          configurable: true,
+        });
+        this.length = arguments.length;
+        for (var i = 0; i < this.length; i++) {
+          this[i] = arguments[i];
+        }
+      }
+      // creating own method cusPush we push the element in array
+      MyArray.prototype.cusPush = function (element) {
+        let index = this.length;
+        this.length++;
+        this[index] = element;
+      };
+
+      //creating own method called cusRevArray in this function
+      MyArray.prototype.cusRevArray = function () {
+        let index = 0;
+        var newRev = {};
+        for (var i = this.length - 1; i >= 0; i--) {
+          newRev[index++] = this[i];
+        }
+
+        return newRev;
+      };
+
+      //creating own method called cusPrintArray using loop or we can also do this by Object.values(this)
+      MyArray.prototype.cusPrintArray = function () {
+        // for (var i = 0; i < this.length; i++) {
+        //     console.log(this[i]);
+        // }
+        // console.log(Object.values(this));
+      };
+
+      //creating own method called cusFirstEle in this method we return this[0] this automatically returns first element
+      MyArray.prototype.cusFirstEle = function () {
+        // let ele = this[0];
+        // return ele;
+        return this[0];
+      };
+
+      var arr = new MyArray("Shubham", "Ankush", "Akbar", "Amar", "Anthony");
+      //pushing new element in arr
+      arr.cusPush("Anshuman");
+      //printing array elements
+      console.log(Object.values(arr));
+      //printing array length
+      console.log(arr.length);
+      //get first element and print element
+      let val = arr.cusFirstEle();
+      //   console.log(val);
+      // print array elements
+      arr.cusPrintArray();
+      //printing rev array
+      var arrays = arr.cusRevArray();
+      console.log(arrays);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Array 1 Assignment</title>
+  </head>
+  <body>
+    <h1>Prototype & Inheritance</h1>
+    <script>
+      function MyArray(x) {
+        Object.defineProperty(this, "length", {
+          value: 0,
+          writable: true,
+          enumerable: false,
+          configurable: true,
+        });
+        this.length = arguments.length;
+        for (var i = 0; i < this.length; i++) {
+          this[i] = arguments[i];
+        }
+      }
+      var arr = new MyArray("Shubham", "Ankush", "Akbar", "Amar", "Anthony");
+      console.log(arr.length);
+      //   console.log(Object.values(arr));
+    </script>
+  </body>
+</html>

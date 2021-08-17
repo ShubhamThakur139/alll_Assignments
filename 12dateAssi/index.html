@@ -57,19 +57,25 @@
       </div>
     </div>
     <script>
+      // function to remove existing lists in webpage
       function remove_lists() {
+        // select all lists element
         let lists = document.querySelectorAll("li");
+        // iterate over every elements and remove from the webpage
         for (var i = 0; i < lists.length; i++) {
           lists[i].remove();
         }
       }
+
+      // when  object button is clicked it shows 4 points dynamically on object
       const objects = document.getElementById("objects");
       objects.addEventListener("click", () => {
         remove_lists();
         let name = document.getElementById("objects");
         let list_items = document.getElementById("list-items");
         let heading = document.getElementById("heading");
-        heading.innerText = `${name.innerText}:`;
+        // heading.innerText = `${name.innerText}:`;
+
         let list1 = document.createElement("li");
         list1.textContent =
           "The Object class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities.";
@@ -88,6 +94,7 @@
         list_items.appendChild(list4);
       });
 
+      // when  array button is clicked it shows 4 points dynamically on array
       const arrays = document.getElementById("arrays");
       arrays.addEventListener("click", () => {
         remove_lists();
@@ -113,6 +120,7 @@
         list_items.appendChild(list4);
       });
 
+      // when  functions button is clicked it shows 4 points dynamically on functions
       const functions = document.getElementById("functions");
       functions.addEventListener("click", () => {
         remove_lists();
@@ -138,6 +146,7 @@
         list_items.appendChild(list4);
       });
 
+      // when  strings button is clicked it shows 4 points dynamically on strings
       const strings = document.getElementById("strings");
       strings.addEventListener("click", () => {
         remove_lists();
@@ -162,6 +171,8 @@
         list_items.appendChild(list3);
         list_items.appendChild(list4);
       });
+
+      // when  numbers button is clicked it shows 4 points dynamically on numbers
       const numbers = document.getElementById("numbers");
       numbers.addEventListener("click", () => {
         remove_lists();
@@ -187,6 +198,7 @@
         list_items.appendChild(list4);
       });
 
+      // when  null button is clicked it shows 4 points dynamically on null
       const nulls = document.getElementById("nulls");
       nulls.addEventListener("click", () => {
         remove_lists();
@@ -212,6 +224,7 @@
         list_items.appendChild(list4);
       });
 
+      // when  undefined button is clicked it shows 4 points dynamically on undefined
       const undefineds = document.getElementById("undefineds");
       undefineds.addEventListener("click", () => {
         remove_lists();
